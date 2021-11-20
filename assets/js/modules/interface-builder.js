@@ -16,7 +16,7 @@ let div_to_insert = document.getElementById('Animales');
 export function createCard(element){
     //Creating the col div that will contain the card
     let div = div_to_insert.appendChild(document.createElement('div'));
-    div.className = 'bg-dark text-white mb-2 col-3';
+    div.className = 'bg-dark text-white mb-5 col-3';
     div.style.marginLeft = '2.7rem';
     div.style.padding = '0px';
     //Inserting the img with the attributes at the container(col) div

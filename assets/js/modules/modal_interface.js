@@ -1,5 +1,6 @@
 import {animal_list_to_show} from './form-control.js'
 let modal_img, modal_age, modal_comment;
+
 //Setting up modal Structure.
 (() => {
     const main_parent = document.querySelector('.modal-body');

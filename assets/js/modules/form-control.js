@@ -9,6 +9,7 @@ import Aguila from '../animales/variedades/aguila.js';
 const preview_card = document.getElementById('preview').parentNode;
 let preview_img = null;
 let is_img_changed = false;
+const obj_animal_varierity_list = [Leon, Lobo, Oso, Serpiente, Aguila]
 export let animal_list_to_show = [];
 
 //Get the animal object asking for the name
@@ -50,43 +51,26 @@ export function Validator(){
     return true;
 }
 
+function animalInstancing(animal_id){
+    animal_list_to_show.push(new obj_animal_varierity_list[animal_id](animales[animal_id].name,
+        document.getElementById('edad').value,
+        animales[animal_id].imagen,
+        document.getElementById('comentarios'),
+        animales[animal_id].sonido));
+}
+
 //Instancing a new object with the data collected from the form and pushing the object to the array
 export function AnimalPusher(){
     switch(document.getElementById('animal').value){
-        case animales[0].name:
-            animal_list_to_show.push(new Leon(animales[0].name,
-                document.getElementById('edad').value,
-                animales[0].imagen,
-                document.getElementById('comentarios'),
-                animales[0].sonido));
+        case animales[0].name: animalInstancing(0);
             break;
-        case animales[1].name:
-            animal_list_to_show.push(new Lobo(animales[1].name,
-                document.getElementById('edad').value,
-                animales[1].imagen,
-                document.getElementById('comentarios').value,
-                animales[1].sonido));
+        case animales[1].name: animalInstancing(1);
             break;
-        case animales[2].name:
-            animal_list_to_show.push(new Oso(animales[2].name,
-                document.getElementById('edad').value,
-                animales[2].imagen,
-                document.getElementById('comentarios').value,
-                animales[2].sonido));
+        case animales[2].name: animalInstancing(2);
             break;
-        case animales[3].name:
-            animal_list_to_show.push(new Serpiente(animales[3].name,
-                document.getElementById('edad').value,
-                animales[3].imagen,
-                document.getElementById('comentarios').value,
-                animales[3].sonido));
+        case animales[3].name: animalInstancing(3);
             break;
-        case animales[4].name:
-            animal_list_to_show.push(new Aguila(animales[4].name,
-                document.getElementById('edad').value,
-                animales[4].imagen,
-                document.getElementById('comentarios').value,
-                animales[4].sonido));
+        case animales[4].name: animalInstancing(4);
             break;
         default: break;
     }

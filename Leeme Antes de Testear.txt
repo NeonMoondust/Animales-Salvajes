@@ -1,0 +1,21 @@
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°MODO DE USO°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+Hola!, Para hacer un testeo mas fluido inclui una opcion tester, valga la redundancia!.
+en ./Test/ hay un archivo testMode.sh el cual debe ejecutarse a travez de una "bash console" y posteriormente
+se debe clickear el boton "AGREGAR" de la pagina principal sin necesidad de colocar nada en las casillas.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+Una vez ejecutado el TestMode se comentaran las funciones principales y se descomentaran las del
+TEST-INJECTOR, esta funcionalidad no es nada mas que un auto adheridor de tarjetas aleatorias, insertará
+x tarjetas aleatorias en la Interfaz con la unica diferencia de que en "Comentarios" de la interfaz modal
+dira el numero de tarjeta asignado para crearse ejemplo "TEST-PURPOSE #5".
+
+El parametro se refiere a cuantas tarjetas aleatorias queremos crear ej. "50" para crear 50 tarjetas
+
+{  sh ./testMode.sh parametro  }
+
+
+PARA VOLVER AL ESTADO ORIGINAL DEL PROJECTO SOLO EJECUTAR EN EL DIRECTORIO ./test el comando:
+
+{  sh ./normalMode.sh  }
