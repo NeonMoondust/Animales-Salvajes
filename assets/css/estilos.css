@@ -8,6 +8,7 @@ body {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #343A40;
   height: 100%;
   padding: 100px;
 }
@@ -36,6 +37,7 @@ body {
 
 #Animales div >div:hover {
   box-shadow: 0px 1px 5px 1px;
+  border-radius: 6px;
 }
 
 .participante {
@@ -48,3 +50,5 @@ body {
     max-width: 85% !important;
 }
 
+::-webkit-scrollbar {width: 6px; height: 4px; background: #343A40; border-radius: 5px;}
+::-webkit-scrollbar-thumb { background-color: #808080 ; border-radius: 5px;}
