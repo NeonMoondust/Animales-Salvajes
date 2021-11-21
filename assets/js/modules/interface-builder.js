@@ -10,13 +10,17 @@ let div_to_insert = document.getElementById('Animales');
     
     div_to_insert = div_to_insert.appendChild(document.createElement('div'));
     div_to_insert.className = 'row';
+    div_to_insert.style.overflowY =  'auto';
+    const width = div_to_insert.parentNode.getBoundingClientRect().width;
+    div_to_insert.style.height = `${width}px`;
+
 })();
 
 //A card creator with all the needed to insert a new card on html
 export function createCard(element){
     //Creating the col div that will contain the card
     let div = div_to_insert.appendChild(document.createElement('div'));
-    div.className = 'bg-dark text-white mb-5 col-3';
+    div.className = 'bg-dark text-white mb-4 col-3';
     div.style.marginLeft = '2.7rem';
     div.style.padding = '0px';
     //Inserting the img with the attributes at the container(col) div

@@ -31,7 +31,7 @@ document.getElementById('btnRegistrar').onclick = () => {
     //TestInjector(number_of_animal);
 }
 
-//-------MODAL-------AUDIO-------//
+//-------MODAL-------AUDIO-------
 
 //Listen every click made on interface where the cards are created and filter by the last on the path
 //It brings his id and then split it to only send the id-number as parameter of the called method

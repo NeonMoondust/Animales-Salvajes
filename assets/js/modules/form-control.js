@@ -55,7 +55,7 @@ function animalInstancing(animal_id){
     animal_list_to_show.push(new obj_animal_varierity_list[animal_id](animales[animal_id].name,
         document.getElementById('edad').value,
         animales[animal_id].imagen,
-        document.getElementById('comentarios'),
+        document.getElementById('comentarios').value,
         animales[animal_id].sonido));
 }
 
@@ -79,9 +79,11 @@ export function AnimalPusher(){
 
 export function ChangePreviewImg(){
     if(!is_img_changed){
+        const height = preview_card.getBoundingClientRect().height
         document.getElementById('preview').className = 'd-none';
         preview_card.className = 'card bg-dark';
         preview_img = preview_card.appendChild(document.createElement('img'));
+        preview_img.style.height =  `${height}px`;
         is_img_changed = true;
     }
     preview_img.src = `./assets/imgs/${getAnimalByName(document.getElementById('animal').value).imagen}`;
